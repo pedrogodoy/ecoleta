@@ -1,56 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+<!-- Vai herdar as propriedades do layout -->
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% set pageId = "page-search-results" %}
+
+{% block title %}
     <title>Resultado da pesquisa</title>
+{% endblock title %}
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Ubuntu:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
+{% block styles %}
     <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
 
-    <link rel="stylesheet" href="/styles/responsive.css">
-</head>
+    
+{% block content %}
+{% include "partials/page-header.html" %}
 
-<body>
-    <div id="page-search-results">
+<main>
 
-       {% include "partials/page-header.html" %}
+    <h4>
+        <strong>2 pontos</strong> encontrados
+    </h4>
 
-        <main>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1558583055-d7ac00b1adca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" alt="Collectoria">
+            <h1>Collectoria</h1>
+            <h3>Resíduos eletrônicos, Lâmpadas</h3>
+            <p>
+                Rio do Sul, Santa Catarina <br/>
+                Guilherme Gemballa, jardim america <br/>
+                Número 260
+            </p>
+        </div>
 
-            <h4>
-                <strong>2 pontos</strong> encontrados
-            </h4>
-
-            <div class="cards">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1558583055-d7ac00b1adca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" alt="Collectoria">
-                    <h1>Collectoria</h1>
-                    <h3>Resíduos eletrônicos, Lâmpadas</h3>
-                    <p>
-                        Rio do Sul, Santa Catarina <br/>
-                        Guilherme Gemballa, jardim america <br/>
-                        Número 260
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1518792528501-352f829886dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
-                    <h1>Pappersider</h1>
-                    <h3>Papeis e papelões</h3>
-                    <p>
-                        Rio do Sul, Santa Catarina <br/>
-                        Guilherme Gemballa, jardim america <br/>
-                        Número 260
-                    </p>
-                </div>
-            </div>
-        </main>        
-
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518792528501-352f829886dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
+            <h1>Pappersider</h1>
+            <h3>Papeis e papelões</h3>
+            <p>
+                Rio do Sul, Santa Catarina <br/>
+                Guilherme Gemballa, jardim america <br/>
+                Número 260
+            </p>
+        </div>
     </div>
-</body>
-
-</html>
+</main>    
+{% endblock content %}
